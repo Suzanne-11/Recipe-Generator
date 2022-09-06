@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lobster&family=Oleo+Script+Swash+Caps&family=Poppins:wght@300;400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lobster&family=Oleo+Script+Swash+Caps&family=Poppins:wght@400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F5EDDC;
+    font-family: 'Poppins', 'sans-serif'; 
+    padding: 0 auto;
+}
+
+.meal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.meal-title{
+    text-align: center;
+    color: #EB1D36;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    font-weight:bold;
+    text-decoration: underline 2px solid #EB1D36;
+    text-underline-position: under;
+    padding: 0px;
+}
+
+h2{
+    text-align: center;
+    color: #EB1D36;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    font-weight:bold;
+    text-decoration: underline 2px solid #EB1D36;
+    text-underline-position: under;
+    /*border-bottom: 2px solid #EB1D36;*/
+}
+
+/*.meal-info li{
+    color: #504949;
+    font-size: 0.8em;
+    font-weight: 500;
+}*/
+
+.meal-img img{
+    max-height: 85vh;
+    align-items: center;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
+    
+}
+
+.meal-details{
+    background-color: #ffd8d8;
+    max-height: 80vh;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
+    padding: 2px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.meal-info{
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    padding: 5px;
+    margin: 15px;
+}
+
+strong{
+    color: #EB1D36;
+    font-size: 1.2em;
+    width: 20vw;
+}
+
+.meal-info li{
+    color: #504949;
+    list-style: none;
+    font-size: 1em;
+    padding: 10px;
+    font-weight: bold;
+    /*font-family: 'Dancing Script', cursive;*/
+}
+
+.links{
+    font-size: 0.9em;
+    text-decoration: none;
+    color: #EB1D36;
+    border-bottom: 2px solid #EB1D36;
+    width: 20vw;
+}
+
+.links:hover{
+    color: #8a0b1a;
+    font-size: 0.9em;
+    text-decoration: none;
+    border-bottom: 2px solid #8a0b1a;
+    width: 20vw;
+}
+
+.meal-instructions-div{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.meal-instructions{
+    max-width: 60vw;
+    margin-left: 20%;
+    font-size: 1.1em;
+    /*padding-top: 2rem;*/
+}
+
+.meal-instructions-div ul{
+    margin-left: 30%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.1em;
+}
+
+/*.ingredients{
+    font-size: 1.1em;
+    padding: 0px;
+    margin:0px;
+    align-items:baseline;
+    justify-content: flex-start;
+    padding-bottom: 0px;
+}*/
+
+.btn{
+    padding: 10px;
+    background-color: #EB1D36;
+    color: white;
+    margin-bottom: 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 2px;
+}
+
+.btn:hover{
+    padding: 10px;
+    background-color: #eb6c7b;
+    color: black;
+    margin-bottom: 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 2px;
+
+}
+

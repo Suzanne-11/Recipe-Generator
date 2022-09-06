@@ -68,7 +68,26 @@ const Meal = ({ meal }) => {
         divRef.current.scrollIntoView({ behavior: "smooth" });
     }
 
-    const downloadPdfDocument = async () => {
+    const printDoc=()=>{
+        /*const input = document.getElementById('meal--details');
+    html2canvas(input)
+      .then((canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF();
+        pdf.addImage(imgData, 'JPEG', 0, 0);
+        // pdf.output('dataurlnewwindow');
+        pdf.save("download.pdf");
+      });*/
+      html2canvas(document.querySelector(".meal--details")).then(canvas => {
+        //document.body.appendChild(canvas);  // if you want see your screenshot in body.
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF('p', 'pt', 'a4', false);
+        pdf.addImage(imgData, 'PNG', 100, 100, 300, 0, undefined, false);
+        pdf.save("download.pdf"); 
+    });
+    };
+
+    /*const downloadPdfDocument = async () => {
         const element = printRef.current;
         const canvas = await html2canvas(element);
         const data = canvas.toDataURL('image/png');
@@ -81,10 +100,122 @@ const Meal = ({ meal }) => {
     
         pdf.addImage(data, 'PNG', 0, 0, pdfWidth, pdfHeight);
         pdf.save('print.pdf');
-    };
+    };*/
 
     return(
-        <div className="info" id="meal" >
+        
+        <div className="container">
+            <div className="meal--head">
+                <h1 className="meal--title">{strMeal}</h1>
+                <img src={strMealThumb} alt={strMeal}/>
+                <div className="buttons">
+                    <button onClick={recipe} className="btn">VIEW RECIPE  <i className="fas fa-long-arrow-alt-right"></i>
+                    </button>    
+                    <button onClick={printDoc} ref={printRef} className="btn" >DOWNLOAD RECIPE  <i className="fas fa-long-arrow-alt-right"></i>
+                    </button>    
+                    <button onClick={() => window.location.reload(false)} className="btn" >NEW RECIPE  <i className="fas fa-long-arrow-alt-right"></i>
+                    </button> 
+                    <a href={strYoutube} className="link-btn">WATCH VIDEO  <i className="fas fa-long-arrow-alt-right"></i></a>
+                    {/* <button onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href={strYoutube};}} 
+                                className="btn" >WATCH VIDEO  <i className="fas fa-long-arrow-alt-right"></i>
+                    </button>  */}
+                </div>
+            </div>
+            <div className="meal--details" ref={printRef}>
+                <h1 className="meal--title">{strMeal}</h1>
+                <div className="meal--details--1">
+                    <div className="ingredients" >
+                        <h2 className="heading">Ingredients</h2>
+                        <ul>
+                        {strIngredient1 && strMeasure1 ? <li><strong>{strIngredient1}</strong> : {strMeasure1}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient2 && strMeasure2 ? <li><strong>{strIngredient2}</strong> : {strMeasure2}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient3 && strMeasure3 ? <li><strong>{strIngredient3}</strong> : {strMeasure3}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient4 && strMeasure4 ? <li><strong>{strIngredient4}</strong> : {strMeasure4}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient5 && strMeasure5 ? <li><strong>{strIngredient5}</strong> : {strMeasure5}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient6 && strMeasure6 ? <li><strong>{strIngredient6}</strong> : {strMeasure6}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient7 && strMeasure7 ? <li><strong>{strIngredient7}</strong> : {strMeasure7}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient8 && strMeasure8 ? <li><strong>{strIngredient8}</strong> : {strMeasure8}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient9 && strMeasure9 ? <li><strong>{strIngredient9}</strong> : {strMeasure9}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient10 && strMeasure10 ? <li><strong>{strIngredient10}</strong> : {strMeasure10}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient11 && strMeasure11 ? <li><strong>{strIngredient11}</strong> : {strMeasure11}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient12 && strMeasure12 ? <li><strong>{strIngredient12}</strong> : {strMeasure12}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient13 && strMeasure13 ? <li><strong>{strIngredient13}</strong> : {strMeasure13}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient14 && strMeasure14 ? <li><strong>{strIngredient14}</strong> : {strMeasure14}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient15 && strMeasure15 ? <li><strong>{strIngredient15}</strong> : {strMeasure15}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient16 && strMeasure16 ? <li><strong>{strIngredient16}</strong> : {strMeasure16}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient17 && strMeasure17 ? <li><strong>{strIngredient17}</strong> : {strMeasure17}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient18 && strMeasure18 ? <li><strong>{strIngredient18}</strong> : {strMeasure18}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient19 && strMeasure19 ? <li><strong>{strIngredient19}</strong> : {strMeasure19}</li> : null }
+                        </ul>
+                        <ul>
+                            {strIngredient20 && strMeasure20 ? <li><strong>{strIngredient20}</strong> : {strMeasure20}</li> : null }
+                        </ul>
+                    </div>
+                    <div className="tags-inst">
+                        <div className="tags">
+                            <ul className="meal-info" >
+                                <li>
+                                    CUISINE <strong>{strArea}</strong>
+                                </li>
+                                <li>
+                                    TAGS <strong>{strCategory},{strTags}</strong>
+                                </li>
+                                <li>
+                                    YOUTUBE <a href={strYoutube} className="links">{strMeal}</a>    BLOG <a href={strSource} className="links">{strMeal}</a>
+                                </li>                       
+                            </ul>
+                        </div>
+                        <div className="instructions" ref={divRef}>
+                            <h2 className="heading">Instructions</h2>
+                            <p className="meal-instructions">{strInstructions}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        /*
+        <div className="info" id="meal" ref={cRef}>
             <h1 className="meal-title" ref={printRef}>{strMeal}</h1>
             <div className = "meal">
                 <div className="meal-img" >
@@ -117,7 +248,7 @@ const Meal = ({ meal }) => {
                 </div>
                 
             </div>
-            <div className="meal-instructions-div" ref={printRef}/*ref={(el)=> {divRef(el); printRef(el);}}*/>
+            <div className="meal-instructions-div" ref={printRef} //ref={(el)=> {divRef(el); printRef(el);}}>
                 <h2>Ingredients</h2>
                 <ul>
                     {strIngredient1 && strMeasure1 ? <li><strong>{strIngredient1}</strong> : {strMeasure1}</li> : null }
@@ -182,7 +313,7 @@ const Meal = ({ meal }) => {
                 <h2>Method</h2>
                 <p className="meal-instructions">{strInstructions}</p>
             </div>
-        </div>
+        </div>*/
     )
 }
 

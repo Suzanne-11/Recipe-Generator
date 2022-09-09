@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Recipe from "./Recipe";
 import {useRef} from 'react';
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
+import { PDFExport } from "@progress/kendo-react-pdf";
 
 const Meal = ({ meal }) => {
 
@@ -68,26 +68,7 @@ const Meal = ({ meal }) => {
         divRef.current.scrollIntoView({ behavior: "smooth" });
     }
 
-    const printDoc=()=>{
-        /*const input = document.getElementById('meal--details');
-    html2canvas(input)
-      .then((canvas) => {
-        const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF();
-        pdf.addImage(imgData, 'JPEG', 0, 0);
-        // pdf.output('dataurlnewwindow');
-        pdf.save("download.pdf");
-      });*/
-      html2canvas(document.querySelector(".meal--details")).then(canvas => {
-        //document.body.appendChild(canvas);  // if you want see your screenshot in body.
-        const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF('p', 'pt', 'a4', false);
-        pdf.addImage(imgData, 'PNG', 100, 100, 300, 0, undefined, false);
-        pdf.save("download.pdf"); 
-    });
-    };
-
-    /*const downloadPdfDocument = async () => {
+    const downloadPdfDocument = async () => {
         const element = printRef.current;
         const canvas = await html2canvas(element);
         const data = canvas.toDataURL('image/png');
@@ -100,7 +81,7 @@ const Meal = ({ meal }) => {
     
         pdf.addImage(data, 'PNG', 0, 0, pdfWidth, pdfHeight);
         pdf.save('print.pdf');
-    };*/
+    };
 
     return(
         
@@ -111,19 +92,19 @@ const Meal = ({ meal }) => {
                 <div className="buttons">
                     <button onClick={recipe} className="btn">VIEW RECIPE  <i className="fas fa-long-arrow-alt-right"></i>
                     </button>    
-                    <button onClick={printDoc} ref={printRef} className="btn" >DOWNLOAD RECIPE  <i className="fas fa-long-arrow-alt-right"></i>
+                    <button onClick={() => {
+            if (printRef.current) {
+                printRef.current.save();
+            }
+          }} className="btn" >DOWNLOAD RECIPE  <i className="fas fa-long-arrow-alt-right"></i>
                     </button>    
                     <button onClick={() => window.location.reload(false)} className="btn" >NEW RECIPE  <i className="fas fa-long-arrow-alt-right"></i>
                     </button> 
                     <a href={strYoutube} className="link-btn">WATCH VIDEO  <i className="fas fa-long-arrow-alt-right"></i></a>
-                    {/* <button onClick={(e) => {
-                                e.preventDefault();
-                                window.location.href={strYoutube};}} 
-                                className="btn" >WATCH VIDEO  <i className="fas fa-long-arrow-alt-right"></i>
-                    </button>  */}
                 </div>
             </div>
-            <div className="meal--details" ref={printRef}>
+        <PDFExport paperSize="A4" margin="0.5cm" ref={printRef}>
+            <div className="meal--details" ref={printRef} id="meal--details">
                 <h1 className="meal--title">{strMeal}</h1>
                 <div className="meal--details--1">
                     <div className="ingredients" >
@@ -211,8 +192,9 @@ const Meal = ({ meal }) => {
                 </div>
 
             </div>
+            </PDFExport>
         </div>
-
+        
 
         /*
         <div className="info" id="meal" ref={cRef}>

@@ -14,6 +14,43 @@ body{
    
 }
 
+@media (max-width: 300px) {
+    html { font-size: 70%; }
+}
+
+@media (min-width: 500px) {
+    html { font-size: 80%; }
+}
+
+@media (min-width: 700px) {
+    html { font-size: 100%; }
+}
+
+@media (min-width: 1200px) {
+    html { font-size: 120%; }
+}
+
+@media print {
+    .links{
+        display: none;
+    }
+    h2{
+        padding:0!important;
+        margin:0!important;
+    }
+    p{
+        font-size: 0.5em!important;
+    }
+}
+@page {
+    margin: 2cm;
+  }
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
 .meal--head{
     text-align: center;
     height: 100vh;
@@ -23,7 +60,7 @@ body{
     text-align: center;
     color: #EB1D36;
     font-family: 'Dancing Script', cursive;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight:bold;
     text-decoration: underline 2px solid #EB1D36;
     text-underline-position: under;
@@ -45,6 +82,7 @@ img{
 .meal--details--1{
     display:flex;
     flex-direction: row;
+    padding-bottom: 0;
 }
 
 .heading{
@@ -69,6 +107,7 @@ img{
     list-style-type: none;   
     align-items: flex-start; 
     margin-left: 20px;
+    font-size: 0.8em;
 }
 
 .tags-inst{
@@ -91,14 +130,15 @@ strong{
     color: #EB1D36
 }
 
-.instructions{
+.meal-instructions{
     padding: 10px;
     margin-right: 20px;
+    font-size: 0.9em;
 }
 
 .meal-info{
-    font-size: 0.9em;
-    padding: 15px; 
+    font-size: 0.8em;
+    padding: 20px; 
 }
 /*
 .meal{
@@ -247,7 +287,7 @@ strong{
 }
 
 .link-btn{
-    padding: 8px;
+    padding: 6px;
     background-color: #EB1D36;
     color: white;
     border: none;
@@ -256,11 +296,11 @@ strong{
     box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 2px;
     margin: 5px;
     text-decoration: none;
-    font-size: 0.85em;
+    font-size: 0.75em;
 }
 
 .link-btn:hover{
-    padding: 8px;
+    padding: 6px;
     background-color: #eb6c7b;
     color: black;
     border: none;
@@ -269,7 +309,7 @@ strong{
     box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 2px;
     margin: 5px;
     text-decoration: none;
-    font-size: 0.85em;
+    font-size: 0.75em;
 }
 
 

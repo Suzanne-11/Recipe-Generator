@@ -80,7 +80,7 @@ const Meal = ({ meal }) => {
           (imgProperties.height * pdfWidth) / imgProperties.width;
     
         pdf.addImage(data, 'PNG', 0, 0, pdfWidth, pdfHeight);
-        pdf.save('${mealStr}.pdf');
+        pdf.save('export.pdf');
     };
 
     return(
@@ -105,7 +105,7 @@ const Meal = ({ meal }) => {
             </div>
         <PDFExport paperSize="A4" margin="0.7cm" font-size="0.5em" ref={printRef}>
             <div className="meal--details" ref={printRef} id="meal--details">
-                <h2 className="meal--title">{strMeal}</h2>
+                <h2 className="meal--title" style={{padding: "20 0px"}}>{strMeal}</h2>
                 <div className="meal--details--1">
                     <div className="ingredients" >
                         <h2 className="heading">Ingredients</h2>

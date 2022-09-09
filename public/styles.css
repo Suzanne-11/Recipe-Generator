@@ -11,8 +11,10 @@
 body{
     background-color: #F5EDDC;
     font-family: 'Poppins', 'sans-serif'; 
-   
+    background: linear-gradient(-45deg, #ffc6b8, #ffa4c0, #f99de0, #d48df8);
 }
+
+
 
 @media (max-width: 300px) {
     html { font-size: 70%; }
@@ -64,41 +66,42 @@ body{
 
 .meal--title{
     text-align: center;
-    color: #EB1D36;
+    color: rgb(136, 7, 99);
     font-family: 'Dancing Script', cursive;
-    font-size: clamp(2rem, 8vw, 3rem);
+    font-size: clamp(2rem, 8vw, 2.5rem);
     font-weight:bold;
-    text-decoration: underline 2px solid #EB1D36;
+    text-decoration: underline 2px solid rgb(136, 7, 99);
     text-underline-position: under;
-    padding-top: 15px;
+    padding: 15px;
 }
 
 
 img{
     height: 75vh;
-    box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 2px;
+    box-shadow: 0 4px 8px 0 rgba(100, 31, 83, 0.19), 0 6px 20px 0 rgba(100, 31, 83, 0.19);
     border-radius: 5px;
 }
 
 /*PDF Page*/
 
 .meal--details{
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 .meal--details--1{
     display:flex;
     flex-direction: row;
-    padding-bottom: 0;
+    padding-bottom: 10px;
+    
 }
 
 .heading{
     /*text-align: center;*/
-    color: #EB1D36;
+    color: rgb(136, 7, 99);
     font-family: 'Dancing Script', cursive;
     font-size: 2em;
     font-weight:bold;
-    text-decoration: underline 2px solid #EB1D36;
+    text-decoration: underline 2px solid rgb(136, 7, 99);
     text-underline-position: under;
     padding: 5px;
     margin: 5px;
@@ -108,6 +111,10 @@ img{
     flex: 33%;
     padding: 10px;
     margin-left: 20px;
+    background-color: #ffffff80;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
 }
 
 .ingredients ul{
@@ -115,6 +122,20 @@ img{
     align-items: flex-start; 
     margin-left: 20px;
     font-size: 0.8em;
+}
+
+.tags{
+    background-color: #ffffff80;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.instructions{
+    background-color: #ffffff80;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
 }
 
 .tags-inst{
@@ -128,13 +149,13 @@ img{
 }
 
 strong{
-    color: #EB1D36;
+    color: rgb(136, 7, 99);
     padding: 5px;
     font-size: 1.1em;
 }
 
 .links{
-    color: #EB1D36
+    color: rgb(136, 7, 99)
 }
 
 .meal-instructions{
@@ -150,7 +171,7 @@ strong{
 
 .btn{
     padding: 10px;
-    background-color: #EB1D36;
+    background-color: rgb(150, 7, 110);
     color: white;
     border: none;
     font-weight: bold;
@@ -161,7 +182,7 @@ strong{
 
 .btn:hover{
     padding: 10px;
-    background-color: #eb6c7b;
+    background-color: rgb(209, 10, 152);
     color: black;
     border: none;
     font-weight: bold;
@@ -171,7 +192,7 @@ strong{
 
 .link-btn{
     padding: 6px;
-    background-color: #EB1D36;
+    background-color: rgb(150, 7, 110);
     color: white;
     border: none;
     font-weight: bold;
@@ -184,7 +205,7 @@ strong{
 
 .link-btn:hover{
     padding: 6px;
-    background-color: #eb6c7b;
+    background-color: rgb(209, 10, 152);
     color: black;
     border: none;
     font-weight: bold;

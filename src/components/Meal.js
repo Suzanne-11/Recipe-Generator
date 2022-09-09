@@ -80,7 +80,7 @@ const Meal = ({ meal }) => {
           (imgProperties.height * pdfWidth) / imgProperties.width;
     
         pdf.addImage(data, 'PNG', 0, 0, pdfWidth, pdfHeight);
-        pdf.save('print.pdf');
+        pdf.save('${mealStr}.pdf');
     };
 
     return(
@@ -90,22 +90,22 @@ const Meal = ({ meal }) => {
                 <h1 className="meal--title">{strMeal}</h1>
                 <img src={strMealThumb} alt={strMeal}/>
                 <div className="buttons">
-                    <button onClick={recipe} className="btn">VIEW RECIPE  <i className="fas fa-long-arrow-alt-right"></i>
+                    <button onClick={recipe} className="btn">VIEW RECIPE  {/* <i className="fas fa-long-arrow-alt-right"></i> */}
                     </button>    
                     <button onClick={() => {
             if (printRef.current) {
                 printRef.current.save();
             }
-          }} className="btn" >DOWNLOAD RECIPE  <i className="fas fa-long-arrow-alt-right"></i>
+          }} className="btn" >DOWNLOAD RECIPE  {/* <i className="fas fa-arrow-down-to-line"></i> */}
                     </button>    
-                    <button onClick={() => window.location.reload(false)} className="btn" >NEW RECIPE  <i className="fas fa-long-arrow-alt-right"></i>
+                    <button onClick={() => window.location.reload(false)} className="btn" >NEW RECIPE  {/* <i className="fas fa-long-arrow-alt-right"></i> */}
                     </button> 
-                    <a href={strYoutube} className="link-btn">WATCH VIDEO  <i className="fas fa-long-arrow-alt-right"></i></a>
+                    <a href={strYoutube} className="link-btn">WATCH VIDEO  {/* <i className="fas fa-long-arrow-alt-right"></i> */}</a>
                 </div>
             </div>
-        <PDFExport paperSize="A4" margin="0.5cm" ref={printRef}>
+        <PDFExport paperSize="A4" margin="0.7cm" font-size="0.5em" ref={printRef}>
             <div className="meal--details" ref={printRef} id="meal--details">
-                <h1 className="meal--title">{strMeal}</h1>
+                <h2 className="meal--title">{strMeal}</h2>
                 <div className="meal--details--1">
                     <div className="ingredients" >
                         <h2 className="heading">Ingredients</h2>

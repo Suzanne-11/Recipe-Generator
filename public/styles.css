@@ -39,7 +39,13 @@ body{
         margin:0!important;
     }
     p{
-        font-size: 0.5em!important;
+        font-size: 0.3em!important;
+    }
+    .meal-details{
+        display: block;
+    }
+    .meal--details--1{
+        display: block;
     }
 }
 @page {
@@ -60,16 +66,17 @@ body{
     text-align: center;
     color: #EB1D36;
     font-family: 'Dancing Script', cursive;
-    font-size: 2.5em;
+    font-size: clamp(2rem, 8vw, 3rem);
     font-weight:bold;
     text-decoration: underline 2px solid #EB1D36;
     text-underline-position: under;
     padding-top: 15px;
 }
 
+
 img{
     height: 75vh;
-    box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 2px;
+    box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 2px;
     border-radius: 5px;
 }
 
@@ -133,137 +140,13 @@ strong{
 .meal-instructions{
     padding: 10px;
     margin-right: 20px;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 .meal-info{
     font-size: 0.8em;
     padding: 20px; 
 }
-/*
-.meal{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.meal-title{
-    text-align: center;
-    color: #EB1D36;
-    font-family: 'Dancing Script', cursive;
-    font-size: 3em;
-    font-weight:bold;
-    text-decoration: underline 2px solid #EB1D36;
-    text-underline-position: under;
-    padding: 0px;
-}
-
-h2{
-    text-align: center;
-    color: #EB1D36;
-    font-family: 'Dancing Script', cursive;
-    font-size: 3em;
-    font-weight:bold;
-    text-decoration: underline 2px solid #EB1D36;
-    text-underline-position: under;
-    /*border-bottom: 2px solid #EB1D36;
-}
-
-.meal-info li{
-    color: #504949;
-    font-size: 0.8em;
-    font-weight: 500;
-}
-
-.meal-img img{
-    max-height: 85vh;
-    align-items: center;
-    display: flex;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
-    
-}
-
-.meal-details{
-    background-color: #ffd8d8;
-    max-height: 80vh;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
-    padding: 2px;
-    margin: 15px;
-    display: flex;
-    flex-direction: column;
-}
-
-.meal-info{
-    display: flex;
-    flex-direction: column;
-    height: 85vh;
-    padding: 5px;
-    margin: 15px;
-}
-
-strong{
-    color: #EB1D36;
-    font-size: 1.2em;
-    width: 20vw;
-}
-
-.meal-info li{
-    color: #504949;
-    list-style: none;
-    font-size: 1em;
-    padding: 10px;
-    font-weight: bold;
-    /*font-family: 'Dancing Script', cursive;
-}
-
-.links{
-    font-size: 0.9em;
-    text-decoration: none;
-    color: #EB1D36;
-    border-bottom: 2px solid #EB1D36;
-    width: 20vw;
-}
-
-.links:hover{
-    color: #8a0b1a;
-    font-size: 0.9em;
-    text-decoration: none;
-    border-bottom: 2px solid #8a0b1a;
-    width: 20vw;
-}
-
-.meal-instructions-div{
-    text-align: center;
-    margin-top: 3rem;
-}
-
-.meal-instructions{
-    max-width: 60vw;
-    margin-left: 20%;
-    font-size: 1.1em;
-    /*padding-top: 2rem;
-}
-
-.meal-instructions-div ul{
-    margin-left: 30%;
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 1.1em;
-}
-
-/*.ingredients{
-    font-size: 1.1em;
-    padding: 0px;
-    margin:0px;
-    align-items:baseline;
-    justify-content: flex-start;
-    padding-bottom: 0px;
-}*/
 
 .btn{
     padding: 10px;

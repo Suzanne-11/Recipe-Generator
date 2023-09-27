@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lobster&family=Oleo+Script+Swash+Caps&family=Poppins:wght@300;400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lobster&family=Oleo+Script+Swash+Caps&family=Poppins:wght@400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #F5EDDC;
+    font-family: 'Poppins', 'sans-serif'; 
+    background: linear-gradient(-45deg, #ffc6b8, #ffa4c0, #f99de0, #d48df8);
+}
+
+.meal-image{
+    height: 75vh;
+    box-shadow: 0 4px 8px 0 rgba(100, 31, 83, 0.19), 0 6px 20px 0 rgba(100, 31, 83, 0.19);
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .meal-image {
+      height: auto; /* Reset the height to auto for smaller screens */
+      max-width: 90%; /* Ensure the image doesn't overflow its container */
+    }
+  }
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.btn{
+    width: 20%;
+    padding: 10px;
+    background-color: rgb(150, 7, 110);
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 2px;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .buttons {
+      flex-direction: column; /* Change to a column layout */
+      align-items: center;
+      margin: 0 auto;
+    }
+  
+    .btn {
+      width: 90%; /* Make buttons take up full width in the column */
+      margin-bottom: 10px; /* Add margin between buttons in the column */
+    }
+  }
+.link-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 300px) {
+    html { font-size: 70%; }
+}
+
+@media (min-width: 500px) {
+    html { font-size: 80%; }
+}
+
+@media (min-width: 700px) {
+    html { font-size: 100%; }
+}
+
+@media (min-width: 1200px) {
+    html { font-size: 120%; }
+}
+
+@media print {
+    .links{
+        display: none;
+    }
+    h2{
+        padding:0!important;
+        margin:0!important;
+    }
+    p{
+        font-size: 0.3em!important;
+    }
+    .meal-details{
+        display: block;
+    }
+    .meal-details-1{
+        display: block;
+    }
+}
+@page {
+    margin: 2cm;
+  }
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.meal-head{
+    text-align: center;
+    height: 100vh;
+}
+
+.meal-title{
+    text-align: center;
+    color: rgb(136, 7, 99);
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2rem, 8vw, 2.5rem);
+    font-weight:bold;
+    text-decoration: underline 2px solid rgb(136, 7, 99);
+    text-underline-position: under;
+    padding: 15px;
+}
+
+/*PDF Page*/
+
+.heading{
+    /*text-align: center;*/
+    color: rgb(136, 7, 99);
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    font-weight:bold;
+    text-decoration: underline 2px solid rgb(136, 7, 99);
+    text-underline-position: under;
+    padding: 5px;
+    margin: 5px;
+}
+
+.ingredients{
+    flex: 33%;
+    padding: 10px;
+    margin-left: 20px;
+    background-color: #ffffff80;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.ingredients ul{
+    list-style-type: none;   
+    align-items: flex-start; 
+    margin-left: 20px;
+    font-size: 0.8em;
+}
+
+.tags{
+    background-color: #ffffff80;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.instructions{
+    background-color: #ffffff80;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.tags-inst{
+    display:flex;
+    flex-direction: column;
+    flex: 66%;
+}
+
+.tags ul{
+    list-style-type: none;
+}
+
+strong{
+    color: rgb(136, 7, 99);
+    padding: 5px;
+    font-size: 1.1em;
+}
+
+.links{
+    color: rgb(136, 7, 99)
+}
+
+.meal-instructions{
+    padding: 10px;
+    margin-right: 20px;
+    font-size: 0.8em;
+}
+
+.meal-info{
+    font-size: 0.8em;
+    padding: 20px; 
+}
+
+.btn{
+    padding: 10px;
+    background-color: rgb(150, 7, 110);
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 2px;
+    margin: 5px;
+}
+
+.btn:hover{
+    padding: 10px;
+    background-color: rgb(209, 10, 152);
+    color: black;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 2px;
+}
+
+.link-btn{
+    padding: 6px;
+    background-color: rgb(150, 7, 110);
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 2px;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 0.75em;
+}
+
+.link-btn:hover{
+    padding: 6px;
+    background-color: rgb(209, 10, 152);
+    color: black;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 2px;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 0.75em;
+}
+
+.meal-details-1{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 768px) {
+    .meal-details-1 {
+      flex-direction: column; /* Change to a column layout */
+    }
+}
+
+
+
